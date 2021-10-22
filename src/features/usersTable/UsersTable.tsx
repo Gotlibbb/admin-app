@@ -26,7 +26,7 @@ export const UsersTable = React.memo((props: UsersTablePropsType) => {
   const [searchValue, setSearchValue] = useState<string>('')
 
   const onChangeSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.target.value.toLowerCase())
+    setSearchValue(e.target.value)
   }
 
   return (
@@ -44,7 +44,7 @@ export const UsersTable = React.memo((props: UsersTablePropsType) => {
       <LineHeader/>
 
       {
-        users.filter(((u: UserType) => u.name.toLowerCase().includes(searchValue)))
+        users.filter(((u: UserType) => u.name.toLowerCase().includes(searchValue.toLowerCase())))
         .map((u) => (
           <LineRow
             user={u}

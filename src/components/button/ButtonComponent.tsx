@@ -25,4 +25,4 @@ const ButtonComponent = (props: ButtonComponentPropsType) => {
   )
 }
 
-export default ButtonComponent
+export default React.memo(ButtonComponent)

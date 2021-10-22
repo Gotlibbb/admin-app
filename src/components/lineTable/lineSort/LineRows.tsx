@@ -9,7 +9,7 @@ interface LineRowsPropsType {
   setCurrentUserId: (id: string) => void
 }
 
-const LineRows = (props: LineRowsPropsType) => {
+const LineRows = React.memo((props: LineRowsPropsType) => {
   return (
     <LineTableComponent
       user={props.user}
@@ -17,6 +17,6 @@ const LineRows = (props: LineRowsPropsType) => {
       setDeleteModalActive={props.setDeleteModalActive}
       setCurrentUserId={props.setCurrentUserId}/>
   )
-}
+})
 
 export default LineRows

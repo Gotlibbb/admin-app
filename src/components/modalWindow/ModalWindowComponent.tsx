@@ -26,9 +26,7 @@ interface ModalWindowComponentPropsType {
 }
 
 
-export const ModalWindowComponent =
-  React.memo((props: ModalWindowComponentPropsType) => {
-
+export const ModalWindowComponent = React.memo((props: ModalWindowComponentPropsType) => {
     const {
       users,
       deleteModalActive,
